@@ -14,6 +14,14 @@ public class Fibonacci {
 
         return getNthFib(maxN, currN+1, sum2, sum1+sum2);
     }
+
+    final private int getNthFib(int n)
+    {
+        if(n == 0) return 0;
+        if(n == 1) return 1;
+        return(getNthFib(n - 1) + getNthFib(n - 2));
+    }
+
     /**
      * Return the nth number of fibonacci sequence.
      * The fibonacci sequence is calculated by adding the previous two numbers in the sequence to obtain the next
@@ -29,6 +37,7 @@ public class Fibonacci {
      * @return the nth number of fibonacci sequence.
      */
     public int fib(int n){
-        return getNthFib(n, 0, 0, 0);
+        //return getNthFib(n, 0, 0, 0);
+        return getNthFib(n);
     }
 }
